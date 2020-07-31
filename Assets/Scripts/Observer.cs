@@ -25,6 +25,10 @@ public class Observer : MonoBehaviour {
     }
 
     public void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
+
         timer += Time.deltaTime;
         for (int i = 0; i < zeroes.Length; i++) {
             zeroes[i] += new Complex(Mathf.Cos(angles[i]), Mathf.Sin(angles[i])) * 0.01;
