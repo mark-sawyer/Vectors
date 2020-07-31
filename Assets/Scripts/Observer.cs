@@ -33,7 +33,7 @@ public class Observer : MonoBehaviour {
         for (int i = 0; i < zeroes.Length; i++) {
             zeroes[i] += new Complex(Mathf.Cos(angles[i]), Mathf.Sin(angles[i])) * 0.01;
             angles[i] += Random.Range(-0.1f, 0.1f);
-            if (zeroes[i].Magnitude > 10) {
+            if (zeroes[i].Magnitude > 12.5) {
                 angles[i] += Mathf.PI;
             }
         }
